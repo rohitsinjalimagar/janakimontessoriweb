@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact & Admission Forms</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0; padding: 20px;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+  .forms-container {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Common form styles */
+  form {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1 1 400px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  }
+  button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  /* Home button */
+  .home-button {
+    display: block;
+    width: 120px;
+    margin: 0 auto 30px auto;
+    padding: 10px 0;
+    background-color: #2196F3;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .home-button:hover {
+    background-color: #0b7dda;
+  }
+
+  /* Responsive */
+  @media(max-width: 900px) {
+    .forms-container {
+      flex-direction: column;
+      max-width: 500px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Home button -->
+<a href="index.html" class="home-button">Home</a>
+
+<h1>Contact & Admission Forms</h1>
+
+<div class="forms-container">
+
+  <!-- Contact Form -->
+  <form id="contactForm" action="#" method="post">
+    <h2>सम्पर्क फारम / Contact Form</h2>
+
+    <label for="c-name">नाम / Name:</label>
+    <input type="text" id="c-name" name="name" required placeholder="तपाईंको नाम लेख्नुहोस्" />
+
+    <label for="c-email">इमेल / Email:</label>
+    <input type="email" id="c-email" name="email" required placeholder="तपाईंको इमेल ठेगाना" />
+
+    <label for="c-subject">विषय / Subject:</label>
+    <input type="text" id="c-subject" name="subject" placeholder="सन्देशको विषय" />
+
+    <label for="c-message">सन्देश / Message:</label>
+    <textarea id="c-message" name="message" rows="5" required placeholder="यहाँ सन्देश लेख्नुहोस्"></textarea>
+
+    <button type="submit">पठाउनुहोस् / Submit</button>
+  </form>
+
+  <!-- Admission Form -->
+  <form id="admissionForm" action="#" method="post">
+    <h2>भर्ना फारम / Admission Form</h2>
+
+    <label for="a-name">छोराछोरीको नाम / Child's Name:</label>
+    <input type="text" id="a-name" name="child_name" required placeholder="छोराछोरीको नाम लेख्नुहोस्" />
+
+    <label for="a-dob">जन्म मिति / Date of Birth:</label>
+    <input type="date" id="a-dob" name="dob" required />
+
+    <label for="a-grade">भर्ना हुने कक्षा / Grade to Enroll:</label>
+    <select id="a-grade" name="grade" required>
+      <option value="" disabled selected>कक्षा छान्नुहोस्</option>
+      <option value="LKG">LKG</option>
+      <option value="UKG">UKG</option>
+      <option value="Grade 1">Grade 1</option>
+      <option value="Grade 2">Grade 2</option>
+      <option value="Grade 3">Grade 3</option>
+    </select>
+
+    <label for="a-guardian">अभिभावकको नाम / Guardian's Name:</label>
+    <input type="text" id="a-guardian" name="guardian_name" required placeholder="अभिभावकको नाम लेख्नुहोस्" />
+
+    <label for="a-contact">सम्पर्क नम्बर / Contact Number:</label>
+    <input type="tel" id="a-contact" name="contact" required placeholder="फोन नम्बर लेख्नुहोस्" />
+
+    <button type="submit">भर्ना फारम पठाउनुहोस् / Submit Admission</button>
+  </form>
+
+</div>
+
+</body>
+</html>
