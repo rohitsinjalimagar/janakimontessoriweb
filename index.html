@@ -10,6 +10,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
 
 <body>
@@ -190,37 +191,57 @@
 
 
     <section id="admission" class="admission-details">
-    <h2>Admission</h2>
-    <p>We welcome both new and transfer students for the academic year 2025. Please find the admission details below:</p>
+  <h2>Admission</h2>
+  <p>We welcome both new and transfer students for the academic year 2025. Please find the admission details below:</p>
 
-    <h3>📌 For New Admissions:</h3>
-    <ul>
-        <li>Completed application form</li>
-        <li>Copy of Birth Certificate</li>
-        <li>Two recent passport-size photographs</li>
-        <li>Parents' citizenship copies (both father & mother)</li>
-        <li>Entrance interview/assessment (for eligible grades)</li>
-    </ul>
+  <h3>📌 For New Admissions:</h3>
+  <ul>
+    <li>Completed application form</li>
+    <li>Copy of Birth Certificate</li>
+    <li>Two recent passport-size photographs</li>
+    <li>Parents' citizenship copies (both father & mother)</li>
+    <li>Entrance interview/assessment (for eligible grades)</li>
+  </ul>
 
-    <h3>🔄 For Transfer Admissions:</h3>
-    <ul>
-        <li>Transfer Certificate from previous school</li>
-        <li>Academic Marksheet of the previous year</li>
-        <li>Character Certificate (if available)</li>
-        <li>Copy of Birth Certificate</li>
-        <li><strong>School's EMIS Transfer Code (mandatory)</strong></li>
-    </ul>
+  <h3>🔄 For Transfer Admissions:</h3>
+  <ul>
+    <li>Transfer Certificate from previous school</li>
+    <li>Academic Marksheet of the previous year</li>
+    <li>Character Certificate (if available)</li>
+    <li>Copy of Birth Certificate</li>
+    <li><strong>School's EMIS Transfer Code (mandatory)</strong></li>
+  </ul>
 
-    <div class="online-payment-section">
-        <h3>💳 Online Payment</h3>
-        <p>Pay your admission fees securely through any of the following platforms:</p>
-        <div class="payment-buttons">
-            <a href="https://esewa.com.np/#/home" target="_blank" class="payment-button esewa-button">eSewa</a>
-            <a href="https://imepay.com.np/" target="_blank" class="payment-button imepay-button">IME Pay</a>
-            <a href="https://khalti.com/" target="_blank" class="payment-button khalti-button">Khalti</a>
-        </div>
+  <div class="online-payment-section">
+    <h3>💳 Online Payment</h3>
+    <p>Pay your admission fees securely through any of the following platforms:</p>
+    <div class="payment-buttons">
+      <a href="https://esewa.com.np/#/home" target="_blank" class="payment-button esewa-button">eSewa</a>
+      <a href="https://imepay.com.np/" target="_blank" class="payment-button imepay-button">IME Pay</a>
+      <a href="https://khalti.com/" target="_blank" class="payment-button khalti-button">Khalti</a>
     </div>
+  </div>
 </section>
+
+<!-- Admission Form Section -->
+<section id="admission-form" class="admission-section">
+  <h2>Admission Form</h2>
+  <form action="verify.php" method="POST">
+    <label for="name">Student Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="class">Class Applying For:</label>
+    <input type="text" id="class" name="class" required>
+
+    <!-- Cloudflare Turnstile CAPTCHA -->
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAABecLZmnPFridOrc"></div>
+
+    <button type="submit">Submit</button>
+  
+</form>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</section>
+
 
 
     <section id="teachers" class="teachers-section">
